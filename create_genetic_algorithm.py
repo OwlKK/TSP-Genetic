@@ -7,12 +7,11 @@ from create_initial_population import createFirstPopulation
 from fitness import Fitness
 
 
+# is ok
 def rankRoutes(population):
-    # dictionary
     fitnessResults = {}
     for i in range(0, len(population)):
         fitnessResults[i] = Fitness(population[i]).routeFitness()
-
         # .items() returns dictionary's (element/info) of object - here a whole object from dictionary
         # SORTS THE LIST-LIKE OBJECT ACCORDING TO ROUTE LENGTH
     return sorted(fitnessResults.items(), key=operator.itemgetter(1), reverse=True)

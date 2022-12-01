@@ -1,22 +1,23 @@
 # Fitness is the LITERAL inverse of distance function
 class Fitness:
     def __init__(self, route):
-        # same shit
-        # route = create_initial_population.createRoute(cities=city_list_generator.readData())
         self.route = route
         self.distance = 0
         self.fitness = 0.0
 
     def routeDistance(self):
-        # print(len(self.route)) - works here - is 11
-        # print(self.distance) - works here - is 0
+        # for testing
+
+        # prints [cityZ_(x,y), (x,y) ...] 11 times for 11 cities
+        # print(self.route)
         if self.distance == 0:
             pathDistance = 0
-            # print len of route - is 11
-            # print(len(self.route))
-
             for i in range(0, len(self.route)):
-                # self.route[i] - works - gets a city from route at position
+                # same as higher
+                # print(self.route)
+
+                # self.route is a list
+                # print(type(self.route))
                 fromCity = self.route[i]
                 toCity = None
 

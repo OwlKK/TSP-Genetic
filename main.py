@@ -1,15 +1,14 @@
 from city_list_generator import readData
 from create_genetic_algorithm import geneticAlgorithm
 from plotting import plotting
+from show_final_path import print_path
 
 if __name__ == '__main__':
-    cities = readData()
+    cityList = readData()
+    bestRoute = geneticAlgorithm(population=cityList, populationSize=100,
+                                 eliteSize=20, mutationRate=0.01, generations=100)
 
-    # this works - returns a list of objects
-    # print(create_initial_population.createRoute(cities))
-    # print(len(create_initial_population.createRoute(cities)))
+    print(bestRoute)
 
-    geneticAlgorithm(population=cities, populationSize=100, eliteSize=20, mutationRate=0.01, generations=100)
-
-    # plotting(population=cities, populationSize=100,
-    #         eliteSize=20, mutationRate=0.01, generations=100)
+    plotting(population=cityList, populationSize=100,
+             eliteSize=20, mutationRate=0.01, generations=100)

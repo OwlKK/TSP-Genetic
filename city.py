@@ -10,8 +10,9 @@ class City:
     def distance(self, city):
         xDistance = abs(self.x - city.x)
         yDistance = abs(self.y - city.y)
-        # added int
-        distance = int(np.sqrt((xDistance ** 2) + (yDistance ** 2)))
+
+        # ADD INT
+        distance = np.sqrt((xDistance ** 2) + (yDistance ** 2))
         return distance
 
     # returns -> String object(value1, value2)

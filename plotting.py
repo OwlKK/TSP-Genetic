@@ -1,5 +1,4 @@
 from matplotlib import pyplot as plt
-
 from create_genetic_algorithm import rankRoutes, nextGeneration
 from create_initial_population import createFirstPopulation
 
